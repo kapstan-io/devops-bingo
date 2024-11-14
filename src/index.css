@@ -1,0 +1,92 @@
+/* Main app container */
+.App {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  color: #000;
+  padding: 20px;
+}
+
+/* Header styling for title and branding */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.header img {
+  width: 50px;
+}
+
+.header h1 {
+  font-size: 2em;
+  margin: 0;
+}
+
+.header h1 span {
+  color: #4b4b4b;
+  font-weight: 300;
+}
+
+/* Bingo grid container */
+.bingo-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 2px solid #000;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+}
+
+/* Individual bingo card styling */
+.bingo-card {
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #ffffff;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.bingo-card.selected {
+  background-color: #e0f7fa;
+  color: #00796b;
+  font-weight: bold;
+  border: 2px solid #00796b;
+  transform: scale(1.05);
+}
+
+.bingo-card.highlight {
+  color: #673ab7;
+  font-weight: bold;
+}
+
+/* Styling for submit button */
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #388e3c;
+}
+
+/* Result styling */
+.result {
+  margin-top: 20px;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #00796b;
+}
