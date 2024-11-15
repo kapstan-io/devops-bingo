@@ -73,7 +73,7 @@ const App = () => {
       },
       body: new URLSearchParams({
         email: email,
-        personality: personality,
+        personality: personality.label,
       }),
     });
   
