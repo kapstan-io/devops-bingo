@@ -19,6 +19,9 @@ const App = () => {
   };
 
   const handleSubmit = () => {
+    if (selectedCards.length < 5) {
+      return;
+    }
     const personalityCounts = {};
     selectedCards.forEach((cardText) => {
       const card = cards.find((item) => item.text === cardText);
@@ -91,6 +94,9 @@ const App = () => {
       
       {showBingoCards && (
         <div>
+          <div>
+            Been there, done that 😎? Select 5 or more cards to reveal your DevOps personality!
+          </div>
           <div className="bingo-grid">
             {cards.map((card, index) => (
               <BingoCard
@@ -101,7 +107,7 @@ const App = () => {
               />
             ))}
           </div>
-          <button onClick={handleSubmit}>Submit</button>
+          <button disabled={selectedCards.length < 5} onClick={handleSubmit}>Submit</button>
         </div>
       )} 
       { showEmailInput && (

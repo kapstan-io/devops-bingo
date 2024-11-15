@@ -83,6 +83,12 @@ button:hover {
   background-color: #388e3c;
 }
 
+button:disabled {
+  background-color: #ccc;
+  color: #666;
+  cursor: not-allowed;
+}
+
 /* Result styling */
 .result {
   margin-top: 20px;
