@@ -19,8 +19,12 @@ RUN npm run build
 # Use a lightweight web server to serve the built app
 FROM nginx:alpine
 
-# Copy the built app from the previous step
+# Copy the built app to the NGINX html directory
 COPY --from=build /app/build /usr/share/nginx/html
+
+# Copy the custom NGINX configuration and health check file
+COPY nginx/default.conf /etc/nginx/conf.d/default.conf
+COPY nginx/health.html /usr/share/nginx/html/health.html
 
 # Expose the port NGINX listens on
 EXPOSE 80

@@ -3,8 +3,13 @@ import React from 'react';
 const PersonalityResult = ({ personality }) => {
   return (
     <div className="result">
-      <h2>Your DevOps Personality:</h2>
-      <p>{personality}</p>
+      <h2>Your DevOps Personality: {personality.label}</h2>
+      {personality.description.map((line, index) => (
+          <React.Fragment key={index}>
+            {line}
+            <br />
+          </React.Fragment>
+      ))}
     </div>
   );
 };
