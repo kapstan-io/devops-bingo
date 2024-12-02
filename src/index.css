@@ -445,6 +445,12 @@ button.inverted path,
   height: 580px;
 }
 
+@media (max-width: 1440px) {
+  .image-container {
+    overflow: hidden;
+  }
+}
+
 @media (max-width: 990px) {
   .squiggly-image {
     height: 1055px;
@@ -512,7 +518,6 @@ button.inverted path,
 
   .footer {
     overflow: hidden;
-    /* display: none; */
   }
 
   .landing-section {

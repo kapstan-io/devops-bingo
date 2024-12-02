@@ -98,7 +98,7 @@ const App = () => {
 
       <div style={{ display: 'flex', flexDirection: 'column' }}>
         <section className='background'>
-          <div className='container' style={{ overflow: 'hidden' }}>
+          <div className='container image-container'>
             <img
               src={squigglyImage}
               alt=''
