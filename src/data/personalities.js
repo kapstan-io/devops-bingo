@@ -1,6 +1,8 @@
 const personalityDescriptions = {
   'firefighter': {
+    name: 'Firefighter',
     label: 'The Firefighter 🚒',
+    resultName: 'a Firefighter',
     description: [
       "Thrives under pressure, ready for action at a moment’s notice, whether it’s a 3 AM alert or a sudden outage.",
       "Juggles multiple crises with ease, bringing calm to chaos.",
@@ -9,7 +11,9 @@ const personalityDescriptions = {
     ],
   },
   'detective': {
+    name: 'Detective',
     label: 'The Detective 🔍',
+    resultName: 'a Detective',
     description: [
       "Loves unraveling puzzles and tracking down elusive bugs.",
       "The team’s go-to for troubleshooting, with endless patience and razor-sharp focus.",
@@ -18,7 +22,9 @@ const personalityDescriptions = {
     ]
   },
   'guardian': {
+    name: 'Guardian',
     label: 'The Guardian 🛡️',
+    resultName: 'a Guardian',
     description: [
       "Defender of security and compliance, ensuring every access level is airtight and every SOC2 requirement is met.",
       "An RBAC master, meticulously managing permissions so each team member has just the right access—no more, no less.",
@@ -27,7 +33,9 @@ const personalityDescriptions = {
     ]
   },
   cleanupCommander: {
+    name: 'Cleanup Commander',
     label: 'The Cleanup Commander 🧹',
+    resultName: 'a Cleanup Commander',
     description: [
       "Keeps the environment clean and organized, sweeping away technical debt and messy code.",
       "Quietly handles the gruntwork, making the workspace better for everyone.",
@@ -36,7 +44,9 @@ const personalityDescriptions = {
     ]
   },
   flash: {
+    name: 'Flash',
     label: 'The Flash ⚡',
+    resultName: 'the Flash',
     description: [
       "All about speed—quick builds, fast deployments, and zero-downtime updates are your lifeblood.",
       "A true advocate for feature flags, rolling out features fast and safely, toggling them on and off with ease.",
@@ -46,7 +56,9 @@ const personalityDescriptions = {
     ]
   },
   explorer: {
+    name: 'Explorer',
     label: 'The Explorer 🧭',
+    resultName: 'an Explorer',
     description: [
       "Curious and inventive, you can’t resist diving into new tools and settings just to see what’s possible.",
       "Whether it’s testing the latest Kubernetes feature or tweaking infrastructure settings, you love exploring the “what ifs.",
@@ -57,7 +69,9 @@ const personalityDescriptions = {
     ]
   },
   automator: {
+    name: 'Automator',
     label: 'The Automator 🤖',
+    resultName: 'an Automator',
     description: [
       "Turning manual tasks into seamless automation is your victory dance, making scripts your best friends.",
       "A Terraform wizard, you build self-deploying infrastructure, ensuring every change is versioned, consistent, and repeatable.",
