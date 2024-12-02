@@ -1,9 +1,11 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { ReactComponent as VisibilityIcon } from '../assets/svg/Visibility.svg';
 
 export default function Email({ onSubmit }) {
   const [email, setEmail] = useState('');
   const [isLoading, setIsLoading] = useState(false);
+
+  const formRef = useRef(null);
 
   const validateEmail = (email) => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -23,8 +25,13 @@ export default function Email({ onSubmit }) {
     setIsLoading(false);
   };
 
+  useEffect(() => {
+    if (!formRef.current) return;
+    formRef.current.scrollIntoView({ behavior: 'instant', block: 'center' });
+  }, []);
+
   return (
-    <form className="email-section" onSubmit={handleEmailSubmit}>
+    <form className="email-section" onSubmit={handleEmailSubmit} ref={formRef}>
       <div>
         <h2>
           We've cracked your Engineering Personality.
