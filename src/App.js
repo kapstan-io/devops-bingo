@@ -176,14 +176,14 @@ const App = () => {
           {(personality && !showEmailInput) && (
             <>
               <PersonalityResult personality={personality} />
-              <Stats personality={topPersonality} struggle={topStruggle} />
+              <Stats personality={topPersonality || personalityDescriptions.firefighter.name} struggle={topStruggle || cards[0].text} />
               <Banner />
             </>
           )}
         </section>
       </div>
 
-      <Footer />
+      {!showBingoCards && <Footer />}
     </div>
   );
 };

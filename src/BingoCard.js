@@ -11,7 +11,7 @@ const BingoCard = ({ text, selected, onSelect }) => {
 
   return (
     <div
-      className={`bingo-card`}
+      className='bingo-card'
       onClick={() => onSelect(text)}
     >
       <span className="selected-mark" style={selected ? styles : { opacity: 0 }} />
