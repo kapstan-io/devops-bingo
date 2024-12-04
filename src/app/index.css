@@ -331,7 +331,6 @@ button.inverted path,
   padding: 80px 72px;
   justify-content: space-between;
   flex-direction: row;
-  gap: 104px;
 
   font-size: 24px;
   font-weight: 500;
@@ -340,7 +339,7 @@ button.inverted path,
   text-align: left;
 }
 
-.stats-section article {
+.stats-section > article {
   flex: 1;
   padding: 0px 77px;
   display: flex;
@@ -440,9 +439,53 @@ button.inverted path,
   text-align: left;
 }
 
+.personality-card {
+  width: 442px;
+  height: auto;
+  align-items: center;
+}
+
+.personality-card > img {
+  margin-bottom: 20px;
+}
+
+.personality-card > span {
+  margin-bottom: 58px;
+  color: #ebebeb;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: -0.18px;
+}
+
 .personality-image {
   width: 450px;
   height: 580px;
+}
+
+.top-image {
+  width: 30vw;
+  max-width: 442px;
+  height: auto;
+  aspect-ratio: 1;
+}
+
+.top-struggle {
+  background-image: url("../assets/images/struggle-bg.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+
+  color: #ffd100;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 120%;
+  letter-spacing: -0.24px;
 }
 
 @media (max-width: 1440px) {
@@ -610,6 +653,7 @@ button.inverted path,
 
   .stats-section {
     padding: unset;
+    row-gap: 104px;
     padding-bottom: 88px;
   }
 
@@ -649,6 +693,20 @@ button.inverted path,
 
   .links > a {
     padding: 4px 0;
+  }
+
+  .top-image {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1;
+  }
+
+  .personality-card {
+    width: 100%;
+  }
+
+  div:has(> .personality-card) {
+    padding: 0px 24px;
   }
 }
 

@@ -2,13 +2,13 @@ import React, { useEffect, useState } from 'react';
 import BingoCard from './BingoCard';
 import PersonalityResult from './components/Personality';
 import cards from './data/cards';
-import personalityDescriptions from './data/personalities';
+import { personalityDescriptions } from './data/personalities';
 import squigglyImage from './assets/images/squiggly.png';
 import mousePointer from './assets/images/mouse-pointer.png';
 import Header from './components/Header';
 import Marquee from 'react-fast-marquee';
-import { ReactComponent as AsteriskIcon } from './assets/svg/Asterisk.svg';
-import { ReactComponent as ArrowRight } from './assets/svg/Arrow-right.svg';
+import AsteriskIcon from './assets/svg/Asterisk.svg';
+import ArrowRight from './assets/svg/Arrow-right.svg';
 import Title from './components/Title';
 import Email from './components/Email';
 import Stats from './components/Stats';
@@ -85,7 +85,7 @@ const App = () => {
         },
         body: new URLSearchParams({
           email: email,
-          personality: personality.label,
+          personality: personality.name,
           experiences: JSON.stringify(selectedCards),
         }),
       }
@@ -100,13 +100,13 @@ const App = () => {
         <section className='background'>
           <div className='container image-container'>
             <img
-              src={squigglyImage}
+              src={squigglyImage.src}
               alt=''
               className='squiggly-image'
             />
 
             <img
-              src={mousePointer}
+              src={mousePointer.src}
               alt=''
               className='pointer-image'
             />
@@ -166,7 +166,7 @@ const App = () => {
               </div>
 
               <button disabled={selectedCards.length < 5} className='button-main primary' onClick={handleSubmit}>
-                Reveal Your Personality <ArrowRight />
+                Reveal Your Personality {<ArrowRight />}
               </button>
             </section>
           )}

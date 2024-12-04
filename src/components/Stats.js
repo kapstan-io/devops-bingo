@@ -1,26 +1,28 @@
+import { personalityImages } from "../data/personalities";
+import Struggle from "./Struggle";
+
 export default function Stats({ personality, struggle }) {
+  console.log('Stats', personality)
   return (
-    <section className="mobile-column stats-section">
+    <section className="container mobile-column stats-section">
       <article>
-        <div style={{ height: '337px', width: '100%', background: '#FFFFFF' }} />
+        <img alt='Most common persona' src={personalityImages[personality].src} className="top-image" />
 
         <div style={{ display: 'flex', gap: '20px' }}>
           <div className="count">1</div>
-          <div>
-            <span>Most common persona</span><br />
-            <span style={{ fontWeight: 'bold' }}>{personality}</span>
+          <div className="row" style={{ alignItems: 'center' }}>
+            Most common persona
           </div>
         </div>
       </article>
 
       <article>
-        <div style={{ height: '337px', width: '100%', background: '#FFFFFF' }} />
+        <Struggle text={struggle} />
 
         <div style={{ display: 'flex', gap: '20px' }}>
           <div className="count">2</div>
-          <div>
-            <span>Most common struggle</span><br />
-            <span style={{ fontWeight: 'bold' }}>{struggle}</span>
+          <div className="row" style={{ alignItems: 'center' }}>
+            Most relatable struggle
           </div>
         </div>
       </article>

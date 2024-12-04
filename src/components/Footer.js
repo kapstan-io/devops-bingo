@@ -1,9 +1,9 @@
 import React from "react";
-import { ReactComponent as KapstanLogo } from '../assets/svg/Kapstan.svg';
-import { ReactComponent as TwitterIcon } from '../assets/svg/Twitter.svg';
-import { ReactComponent as LinkedInIcon } from '../assets/svg/LinkedIn.svg';
-import { ReactComponent as YouTubeIcon } from '../assets/svg/YouTube.svg';
-import { ReactComponent as SupersetIcon } from '../assets/svg/Superset.svg';
+import KapstanLogo from '../assets/svg/Kapstan.svg';
+import TwitterIcon from '../assets/svg/Twitter.svg';
+import LinkedInIcon from '../assets/svg/LinkedIn.svg';
+import YouTubeIcon from '../assets/svg/YouTube.svg';
+import SupersetIcon from '../assets/svg/Superset.svg';
 
 export default function Footer() {
   return (

@@ -1,35 +1,43 @@
-import React, { useRef } from 'react';
-import { toPng } from 'html-to-image';
-import { ReactComponent as ArrowRight } from '../assets/svg/Arrow-right.svg';
+import React from 'react';
+import ShareIcon from '../assets/svg/Share.svg';
+import { personalityImages } from '../data/personalities';
 
 const PersonalityResult = ({ personality }) => {
-  const resultRef = useRef(null);
+  const pageURL = window.location.protocol + '//' + window.location.hostname + '/personas/' + personality.shareLink;
+  const text = personality.shareText;
 
-  const generateImage = async () => {
-    if (resultRef.current) {
-      const dataUrl = await toPng(resultRef.current, { cacheBust: true });
-      const link = document.createElement('a');
-      link.href = dataUrl;
-      link.download = `${personality.label}-DevOps-Personality.png`;
-      link.click();
-    }
+  const handleLinkedIn = () => {
+    const link = `https://www.linkedin.com/sharing/share-offsite/?url=${pageURL}&text=${encodeURIComponent(text)}`;
+    window.open(link, '_blank');
   };
 
-  // TODO: Share to Twitter and LinkedIn
+  const handleTwitter = () => {
+    const link = `https://twitter.com/intent/tweet?url=${pageURL}&text=${encodeURIComponent(text)}`;
+    window.open(link, '_blank');
+  };
 
   return (
-    <section ref={resultRef} className="container result-section">
+    <section className="container result-section">
       <h2>Congratulations,<br />you're {personality.resultName}!</h2>
 
-      <div style={{ padding: '0px 500px' }}>
-        <div className='personality-image' style={{ background: 'white' }} />
-      </div>
+      <div>
+        <article className="column personality-card">
+          <img alt='Most common persona' src={personalityImages[personality.name].src} className="top-image" />
 
-      <div style={{ display: 'flex', flexDirection: 'column', gap: '40px', alignItems: 'center' }}>
-        <button className='button-main inverted' onClick={generateImage}>
-          <span>Show Off Your Persona</span>
-          <ArrowRight />
-        </button>
+          <span>{personality.description}</span>
+
+          <div className="row" style={{ gap: '24px', alignItems: 'center' }}>
+            <button className='button-main inverted' onClick={handleLinkedIn}>
+              <ShareIcon />
+              <span>LinkedIn</span>
+            </button>
+
+            <button className='button-main inverted' onClick={handleTwitter}>
+              <ShareIcon />
+              <span>X</span>
+            </button>
+          </div>
+        </article>
       </div>
     </section>
   );

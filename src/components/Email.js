@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import { ReactComponent as VisibilityIcon } from '../assets/svg/Visibility.svg';
+import VisibilityIcon from '../assets/svg/Visibility.svg';
 
 export default function Email({ onSubmit }) {
   const [email, setEmail] = useState('');

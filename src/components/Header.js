@@ -1,11 +1,7 @@
 import React from "react";
-import { ReactComponent as KapstanLogo } from '../assets/svg/Kapstan.svg';
+import KapstanLogo from '../assets/svg/Kapstan.svg';
 
 export default function Header() {
-  const handleClick = () => {
-
-  };
-
   return (
     <header className="header">
       <div style={{ display: 'flex', alignItems: 'center', gap: '80px' }}>
@@ -14,7 +10,7 @@ export default function Header() {
         <a href='https://kapstan.io/about-us' target='_blank' rel='noreferrer'>About</a>
       </div>
 
-      <a href="#bingo" className='button-main button-inverted' onClick={handleClick}>Play DevOps Bingo</a>
+      <a href="#bingo" className='button-main button-inverted'>Play DevOps Bingo</a>
     </header>
   );
 }
