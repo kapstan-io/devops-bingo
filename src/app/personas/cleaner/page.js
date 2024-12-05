@@ -5,12 +5,14 @@ export const metadata = {
   openGraph: {
     title: 'Cleanup Commander | Kapstan DevOps Bingo 2024',
     description: 'Find out your DevOps Persona by playing the DevOps Bingo',
+    images: [{ url: 'https://devops-bingo.demo.kapstan.app/personas/cleaner.png' }],
   },
   twitter: {
     title: 'Cleanup Commander | Kapstan DevOps Bingo 2024',
     description: 'Find out your DevOps Persona by playing the DevOps Bingo',
     card: 'summary_large_image',
     site: '@kapstan_infra',
+    images: [{ url: 'https://devops-bingo.demo.kapstan.app/personas/cleaner.png' }],
   }
 };
 

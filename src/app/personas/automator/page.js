@@ -1,3 +1,4 @@
+import { Metadata } from 'next';
 import Redirect from '../redirect';
 
 export const metadata = {
@@ -5,12 +6,14 @@ export const metadata = {
   openGraph: {
     title: 'Automator | Kapstan DevOps Bingo 2024',
     description: 'Find out your DevOps Persona by playing the DevOps Bingo',
+    images: [{ url: 'https://devops-bingo.demo.kapstan.app/personas/automator.png' }],
   },
   twitter: {
     title: 'Automator | Kapstan DevOps Bingo 2024',
     description: 'Find out your DevOps Persona by playing the DevOps Bingo',
     card: 'summary_large_image',
     site: '@kapstan_infra',
+    images: [{ url: 'https://devops-bingo.demo.kapstan.app/personas/automator.png' }],
   }
 };
 
