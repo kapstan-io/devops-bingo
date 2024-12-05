@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import ShareIcon from '../assets/svg/Share.svg';
 import { personalityImages } from '../data/personalities';
+import Image from 'next/image';
 
 const PersonalityResult = ({ personality }) => {
   const pageURL = window.location.protocol + '//' + window.location.hostname + '/personas/' + personality.shareLink;
@@ -16,13 +17,19 @@ const PersonalityResult = ({ personality }) => {
     window.open(link, '_blank');
   };
 
+  const containerRef = useRef(null);
+  useEffect(() => {
+    if (!containerRef.current) return;
+    containerRef.current.scrollIntoView({ behavior: 'instant', block: 'start' });
+  }, []);
+
   return (
-    <section className="container result-section">
+    <section className="container result-section" ref={containerRef}>
       <h2>Congratulations,<br />you're {personality.resultName}!</h2>
 
       <div>
         <article className="column personality-card">
-          <img alt='Most common persona' src={personalityImages[personality.name].src} className="top-image" />
+          <Image src={personalityImages[personality.name]} alt={personality.label} className="top-image" />
 
           <span>{personality.description}</span>
 

@@ -5,7 +5,9 @@ export default function Header() {
   return (
     <header className="header">
       <div style={{ display: 'flex', alignItems: 'center', gap: '80px' }}>
-        <KapstanLogo />
+        <a href='https://www.kapstan.io' target='_blank' rel='noreferrer' style={{ display: 'contents' }}>
+          <KapstanLogo />
+        </a>
 
         <a href='https://kapstan.io/about-us' target='_blank' rel='noreferrer'>About</a>
       </div>

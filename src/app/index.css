@@ -302,7 +302,8 @@ button.inverted path,
   gap: 8px;
   align-items: center;
   background: #fff56e;
-  border: 1px solid #000000;
+  border: none;
+  outline: 1px solid #000000;
   cursor: pointer;
 
   font-size: 14px;
@@ -533,7 +534,7 @@ button.inverted path,
   .bingo-card {
     border: 0.5px solid #333333;
     outline: none;
-    font-size: 10px;
+    font-size: 9px;
     letter-spacing: 0%;
     line-height: 120%;
     width: 18vw;
@@ -708,11 +709,15 @@ button.inverted path,
   div:has(> .personality-card) {
     padding: 0px 24px;
   }
+
+  .top-struggle {
+    font-size: 20px;
+    letter-spacing: -0.2px;
+  }
 }
 
 @media (max-width: 400px) {
   .bingo-card {
-    font-size: 8px;
     line-height: 105%;
   }
 }

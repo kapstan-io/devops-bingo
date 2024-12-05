@@ -8,7 +8,7 @@ import guardian from '../assets/personas/guardian.png';
 
 const commonShareText = `
 What's your DevOps personality?
-#DevOpsPersonality #EngineeringLife #DevOpsBingo`;
+#DevOpsPersonality #EngineeringLife #DevOpsBingo #Kapstan`;
 
 export const personalityDescriptions = {
   'firefighter': {
@@ -79,7 +79,7 @@ export const personalityDescriptions = {
       "Manual tasks? Not on my watch. I automate workflows and build self-deploying infrastructure like magic.",
     ],
     shareLink: 'automator',
-    shareText: `🤖 I'm an Automator! Streamlining processes, creating efficiencies, and letting scripts handle the heavy lifting is my forte.`
+    shareText: `🤖 I'm an Automator! Streamlining processes, creating efficiencies, and letting scripts handle the heavy lifting is my forte.${commonShareText}`
   }
 };
 
