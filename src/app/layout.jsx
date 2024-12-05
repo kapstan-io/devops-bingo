@@ -3,7 +3,10 @@ import "./index.css";
 
 export const metadata = {
   title: "Kapstan DevOps Bingo 2024",
-  description: "Kapstan DevOps Bingo 2024",
+  description: "Find out your DevOps persona by playing the DevOps Bingo",
+  openGraph: {
+    images: [{ url: 'https://devops-bingo.demo.kapstan.app/bingo.png' }],
+  },
 };
 
 export default function RootLayout({ children }) {

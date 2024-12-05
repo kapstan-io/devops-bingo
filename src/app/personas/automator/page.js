@@ -5,12 +5,12 @@ export const metadata = {
   title: 'Automator | Kapstan DevOps Bingo 2024',
   openGraph: {
     title: 'Automator | Kapstan DevOps Bingo 2024',
-    description: 'Find out your DevOps Persona by playing the DevOps Bingo',
+    description: 'Find out your DevOps persona by playing the DevOps Bingo',
     images: [{ url: 'https://devops-bingo.demo.kapstan.app/personas/automator.png' }],
   },
   twitter: {
     title: 'Automator | Kapstan DevOps Bingo 2024',
-    description: 'Find out your DevOps Persona by playing the DevOps Bingo',
+    description: 'Find out your DevOps persona by playing the DevOps Bingo',
     card: 'summary_large_image',
     site: '@kapstan_infra',
     images: [{ url: 'https://devops-bingo.demo.kapstan.app/personas/automator.png' }],
