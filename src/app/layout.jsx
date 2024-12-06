@@ -1,11 +1,12 @@
 import "./reset.css";
 import "./index.css";
+import { PHProvider } from "./providers";
 
 export const metadata = {
   title: "Kapstan DevOps Bingo 2024",
   description: "Find out your DevOps persona by playing the DevOps Bingo",
   openGraph: {
-    images: [{ url: 'https://devops-bingo.demo.kapstan.app/bingo.png' }],
+    images: [{ url: "https://devops-bingo.demo.kapstan.app/bingo.png" }],
   },
 };
 
@@ -28,9 +29,11 @@ export default function RootLayout({ children }) {
           rel="stylesheet"
         />
       </head>
-      <body>
-        <div id="root">{children}</div>
-      </body>
+      <PHProvider>
+        <body>
+          <div id="root">{children}</div>
+        </body>
+      </PHProvider>
     </html>
   );
 }

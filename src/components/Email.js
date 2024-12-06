@@ -1,7 +1,10 @@
 import React, { useEffect, useRef, useState } from "react";
 import VisibilityIcon from '../assets/svg/Visibility.svg';
+import { usePostHog } from "posthog-js/react";
 
 export default function Email({ onSubmit }) {
+  const posthog = usePostHog()
+
   const [email, setEmail] = useState('');
   const [isLoading, setIsLoading] = useState(false);
 
@@ -19,6 +22,11 @@ export default function Email({ onSubmit }) {
 
   const handleEmailSubmit = async (event) => {
     if (event) event.preventDefault();
+    try {
+      posthog.identify(email, { email });
+    } catch (error) {
+      //
+    }
 
     setIsLoading(true);
     await onSubmit(email);
