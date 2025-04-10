@@ -34,12 +34,27 @@ jobs:
   deploy-development:
     name: Deploy Development
     runs-on: ubuntu-latest
-    environment: development
+    environment: Development
     needs: build-and-publish
     if: github.ref == 'refs/heads/main'
 
     steps:
       - name: Deploy on Kapstan Development
+        id: Kapstan
+        uses: kapstan-io/deployment-action@v0.7
+        with:
+          application_name: wwwdevopsbingo
+          image_tag: ${{ env.TAG }}
+          kapstan_api_key: ${{ secrets.DEVOPS_BINGO_KAPSTAN_API_KEY }}
+          wait_for_deployment: true
+
+  deploy-prod:
+    name: Deploy Production
+    runs-on: ubuntu-latest
+    environment: Production
+    needs: [build-and-publish, deploy-development]
+    steps:
+      - name: Deploy on Kapstan Production
         id: Kapstan
         uses: kapstan-io/deployment-action@v0.7
         with:
