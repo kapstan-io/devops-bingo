@@ -31,11 +31,18 @@ jobs:
           DOCKER_BUILDKIT=1 docker buildx build --platform linux/amd64 \
           -t "ghcr.io/slj-inc/devops-bingo:${TAG}" --push .
 
-      - name: Deploy on Kapstan
+  deploy-development:
+    name: Deploy Development
+    runs-on: ubuntu-latest
+    environment: development
+    if: github.ref == 'refs/heads/main'
+
+    steps:
+      - name: Deploy on Kapstan Development
         id: Kapstan
         uses: kapstan-io/deployment-action@v0.7
         with:
           application_name: wwwdevopsbingo
           image_tag: ${{ env.TAG }}
-          kapstan_api_key: ${{ secrets.DEVOPS_BINGO_KAPSTAN_DEV_API_KEY }}
+          kapstan_api_key: ${{ secrets.DEVOPS_BINGO_KAPSTAN_API_KEY }}
           wait_for_deployment: true
