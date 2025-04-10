@@ -24,7 +24,7 @@ jobs:
         run: |
           TAG=$(npm pkg get version | tr -d '"')
           echo "TAG=${TAG}" >> $GITHUB_ENV
-          echo "::set-output name=tag::$latest_version"
+          echo "::set-output name=tag::$TAG"
 
       - name: Login into GitHub Container Registry
         run: echo "${{ secrets.DEVOPS_BINGO_REGISTRY_TOKEN }}" | docker login https://ghcr.io -u ${{ github.actor }} --password-stdin
