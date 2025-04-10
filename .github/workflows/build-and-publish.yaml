@@ -23,6 +23,7 @@ jobs:
         id: set_tag
         run: |
           TAG=$(npm pkg get version | tr -d '"')
+          echo "TAG=${TAG}" >> $GITHUB_ENV
           echo "::set-output name=tag::$latest_version"
 
       - name: Login into GitHub Container Registry
@@ -32,7 +33,7 @@ jobs:
         run: |
           docker buildx create --name app --use
           DOCKER_BUILDKIT=1 docker buildx build --platform linux/amd64 \
-          -t "ghcr.io/slj-inc/devops-bingo:${{ steps.set_tag.outputs.tag }}" --push .
+          -t "ghcr.io/slj-inc/devops-bingo:${TAG}" --push .
 
   deploy-development:
     name: Deploy Development
