@@ -116,7 +116,7 @@ const App = () => {
                 <Title />
 
                 <div style={{ alignSelf: 'flex-start', color: '#FFFFFF' }}>
-                  <span>Powered by Chris, Shyam and</span> <a href='https://www.kapstan.io' className='primary' target='_blank' rel='noreferrer'>Kapstan.io</a>
+                  <span>Powered by</span> <a href='https://www.kapstan.io' className='primary' target='_blank' rel='noreferrer'>Kapstan.io</a>
                 </div>
               </div>
 
