@@ -122,7 +122,7 @@ const App = () => {
 
               <div className='column' style={{ alignSelf: 'flex-start', gap: '36px' }}>
                 <h2>
-                  Let's celebrate the chaos, the late-night saves, and the heroes who keep it all running!
+                  Let's celebrate continuous delivery!
                 </h2>
 
                 <a href="#bingo" className='button-main button-primary' style={{ alignSelf: 'flex-start' }}>
